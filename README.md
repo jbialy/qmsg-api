@@ -23,6 +23,13 @@ Some EXTRAs to implement:
 * functional and system tests
 * deployable in a container
 
-## requirements
+## installation
 
---
+In order to setup the dependencies and test the application locally you will need the following:
+
+* Python 2.7 (on OSX you can use brew install python2 for the latest version)
+* Install virtualenv globally (pip2 install virtualenv)
+* Clone the repo (git clone git@github.com:jbialy/qmsg-api.git) and with to the working dir
+* Create venv (vitualenv venv) and active it (. venv/bin/activate)
+* Install dependencies (pip2 install -r requirements.txt)
+* Develop, test and run the app :)
