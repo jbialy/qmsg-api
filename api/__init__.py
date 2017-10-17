@@ -18,5 +18,9 @@ from api.resources.hello import Hello
 # connect to the db
 db.init_app(app)
 
+# switch to app context and create tables
+with app.app_context():
+    db.create_all()
+
 # expose API resources
 restfulAPI.add_resource(Hello, '/hello')
