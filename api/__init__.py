@@ -19,6 +19,7 @@ from api.resources.hello import Hello
 db.init_app(app)
 
 # switch to app context and create tables
+# reference : http://flask-sqlalchemy.pocoo.org/2.3/contexts/
 with app.app_context():
     db.create_all()
 
