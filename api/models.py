@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-class Post(db.Model):
+class PostModel(db.Model):
 
     ## this class defines the Post table
     #
@@ -10,13 +10,13 @@ class Post(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, unique=False, nullable=False) ## this would normally be a relationship to an id in anothert table
-    post = db.Column(db.String(255), unique=False)
+    message = db.Column(db.String(255), unique=False, nullable=False)
     date_created  = db.Column(db.DateTime, default=db.func.current_timestamp())
 
-    def __init__(self, user_id, post):
+    def __init__(self, user_id, message):
         ## init the post and link it to a user
         self.user_id = user_id
-        self.post = post
+        self.message = message
     
     def save(self):
         ## commit the actual post to the database

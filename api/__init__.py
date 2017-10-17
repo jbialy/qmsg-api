@@ -13,7 +13,7 @@ restfulAPI = Api(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./myawesome.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-from api.resources import Hello
+from api.resources import PostListResource, PostResource
 
 # connect to the db
 db.init_app(app)
@@ -24,4 +24,5 @@ with app.app_context():
     db.create_all()
 
 # expose API resources
-restfulAPI.add_resource(Hello, '/hello')
+restfulAPI.add_resource(PostResource, '/post')
+restfulAPI.add_resource(PostListResource, '/posts')
