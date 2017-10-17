@@ -16,7 +16,7 @@ api = Api(app)
 db = SQLAlchemy(app)
 
 # import database models
-from api.models.user import User
+from api.models.post import Post
 
 # create the db tables
 db.create_all()
