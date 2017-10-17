@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 # import the the db object and models
-from api.models.post import db
+from api.models import db
 
 # init a Flask app
 app = Flask(__name__)
@@ -13,7 +13,7 @@ restfulAPI = Api(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./myawesome.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-from api.resources.hello import Hello
+from api.resources import Hello
 
 # connect to the db
 db.init_app(app)
