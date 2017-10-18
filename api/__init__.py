@@ -24,5 +24,5 @@ with app.app_context():
     db.create_all()
 
 # expose API resources
-restfulAPI.add_resource(PostResource, '/post')
+restfulAPI.add_resource(PostResource, '/post', '/post/<int:post_id>')
 restfulAPI.add_resource(PostListResource, '/posts')
