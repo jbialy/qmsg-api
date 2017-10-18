@@ -25,7 +25,7 @@ Some EXTRAs to implement:
 
 ## method
 
-The application was built using Flask, Flask-restful and SQLAlchemy. Flask provides the base micro-framework while Flask-restful adds API functionality where routes/endpoints can easily be mapped to resources. SQLAlchemy provides SQL abstraction (ORM) making database/table provisioning and interaction easy. There is no need to write SQL queries, tables are respresented as objects!
+The application was built using Flask, Flask-restful and SQLAlchemy. Flask provides the base micro-framework while Flask-restful adds API functionality where routes/endpoints can easily be mapped to resources. SQLAlchemy provides SQL abstraction (ORM) making database/table provisioning and interaction easy. There is no need to write SQL queries, tables are respresented as objects! SQLite database was chosing for demontration purposes, it's local, portable and doesn't require an additional service.
 
 ## installation
 
