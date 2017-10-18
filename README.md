@@ -81,6 +81,28 @@ curl http://localhost:5000/posts
 curl http://localhost:5000/post/2
 ```
 
+## deployment
+AWS provides an easy way to deploy flask applications using AWS ElasticBeanstalk. You can deploy this app to AWS using a free tier account and following these steps:
+
+* install "awsebcli" using pip
+```bash
+pip2 install awsebcli
+```
+* initialize a new application on AWS. You will need an account with a "service role" and your AWS credentials configured
+```bash
+eb init qmsg-api [--profile my_profile]
+```
+* create your environmenet and bring up all services:
+```bash
+eb create flask-dev --cname qmsg-api-dev --single
+```
+* an api instance will be be available using the cname specific. ex: http://qmsg-api-dev.ca-central-1.elasticbeanstalk.com
+* when done, the environment and application can be terminated using:
+```bash
+en terminate flask-dev
+eb delete -a qmsg-api
+```
+
 ## things to cleanup/make better
 * unit testing should be done to make sure that nothing breaks during development. This can be implemented using the "request" module and have a script run a set of requests to test the integrity of the api.
 * some of the resource logic could be moved to the db.Model object to clean up the code
