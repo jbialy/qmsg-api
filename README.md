@@ -23,6 +23,10 @@ Some EXTRAs to implement:
 - [ ] functional and system tests
 - [ ] deployable in a container
 
+## method
+
+The application was built using Flask, Flask-restful and SQLAlchemy. Flask provides the base micro-framework while Flask-restful adds API functionality where routes/endpoints can easily be mapped to resources. SQLAlchemy provides SQL abstraction (ORM) making database/table provisioning and interaction easy. There is no need to write SQL queries, tables are respresented as objects!
+
 ## installation
 
 In order to setup the dependencies and test the application locally you will need the following:
@@ -38,6 +42,7 @@ git clone https://github.com/jbialy/qmsg-api.git
 ```
 * Create venv and active it:
 ```bash
+cd qmsg-api
 vitualenv venv
 . venv/bin/activate
 ```
@@ -73,3 +78,4 @@ curl http://localhost:5000/posts
 ```bash
 curl http://localhost:5000/post/2
 ```
+
