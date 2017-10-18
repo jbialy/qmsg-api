@@ -86,3 +86,5 @@ curl http://localhost:5000/post/2
 * some of the resource logic could be moved to the db.Model object to clean up the code
 * custom 404 page could be created to provide better response
 
+## references
+* Flask on AWS using EB http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html
