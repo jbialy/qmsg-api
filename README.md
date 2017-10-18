@@ -67,6 +67,7 @@ pip2 install -r requirements.txt
 curl -X POST -d "user_id=2&message=how about that?" http://localhost:5000/posts
 curl -X POST -d "user_id=2&message=make another post" http://localhost:5000/posts
 curl -X POST -d "user_id=5&message=how about a post from user 5?" http://localhost:5000/posts
+curl -X POST -d "user_id=12&message=nurses run" http://localhost:5000/post
 ```
 > note that since there is no associated user table, the user_id's are arbitratry and have no relation to an actual user. This is for demontration only!
 
