@@ -1,3 +1,5 @@
+# api/resources.py
+
 from flask_restful import Resource, reqparse
 from api.models import PostModel
 
@@ -17,7 +19,7 @@ class PostListResource(Resource):
         results = []
         # go through all the post objects and add them as individual lists to an array
         for post in posts:
-            obj = {'id': post.id, 'user_id': post.user_id, 'message': post.message}
+            obj = {'post_id': post.id, 'user_id': post.user_id, 'message': post.message}
             results.append(obj)
         return results
 #

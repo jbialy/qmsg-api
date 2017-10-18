@@ -1,3 +1,5 @@
+# api/__init__.py
+
 from flask import Flask
 from flask_restful import Api
 # import the the db object and models
