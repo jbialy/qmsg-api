@@ -82,5 +82,7 @@ curl http://localhost:5000/post/2
 ```
 
 ## things to cleanup/make better
-* flask-resful handles many errors and provides parsing out of the box but additional error handling should be added
+* unit testing should be done to make sure that nothing breaks during development. This can be implemented using the "request" module and have a script run a set of requests to test the integrity of the api.
+* some of the resource logic could be moved to the db.Model object to clean up the code
+* custom 404 page could be created to provide better response
 
