@@ -4,7 +4,7 @@ A simple API with UI front-end for storing and retrieving posts.
 
 ## objectives
 
-* exploses a simple restful api (CRUD):
+* exposes a simple restful api (CRud):
     - [x] list the all messages 
     - [x] submit / post messages
     - [x] retrieve a message and determines if it's a palindrome
@@ -27,12 +27,25 @@ Some EXTRAs to implement:
 
 In order to setup the dependencies and test the application locally you will need the following:
 
-* Python 2.7 (on OSX you can use brew install python2 for the latest version)
-* Install virtualenv globally (pip2 install virtualenv)
-* Clone the repo (git clone git@github.com:jbialy/qmsg-api.git) and with to the working dir
-* Create venv (vitualenv venv) and active it (. venv/bin/activate)
-* Install dependencies (pip2 install -r requirements.txt)
-* Develop, test and run the app :)
+* Python 2.7 (on OSX you can use "brew install python2" for the latest version)
+* Install virtualenv globally
+```bash
+pip2 install virtualenv
+```
+* Clone the repo:
+```bash
+git clone https://github.com/jbialy/qmsg-api.git
+```
+* Create venv and active it:
+```bash
+vitualenv venv
+. venv/bin/activate
+```
+* Install dependencies:
+```bash
+pip2 install -r requirements.txt
+```
+* Develop, tinker and run the app :)
 
 ### testing locally
 
