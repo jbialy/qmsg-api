@@ -87,4 +87,7 @@ curl http://localhost:5000/post/2
 * custom 404 page could be created to provide better response
 
 ## references
-* Flask on AWS using EB http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html
+* [Flask](http://flask.pocoo.org)
+* [Flask-restful](http://flask-restless.readthedocs.io/en/stable/)
+* [SQLAlchemy](https://www.sqlalchemy.org)
+* [Flask on AWS using EB](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html)
