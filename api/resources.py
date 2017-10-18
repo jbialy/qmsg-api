@@ -66,3 +66,11 @@ class PostResource(Resource):
         new_post.save()
         # simply return the new post
         return {'user_id' : args['user_id'], 'message' : args['message']}, 201
+
+#
+# define / endpoint
+#  
+class RootResource(Resource):
+    def get(self):
+        # return a simple clean response
+        return {'message' : 'welcome to qmsg-api'}
