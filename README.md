@@ -10,8 +10,8 @@ A simple API with UI front-end for storing and retrieving posts.
     - [x] retrieve a message and determines if it's a palindrome
 
 * deployed to the Cloud (AWS)
-    - [ ] provision a compute instance programatically
-    - [ ] reachable via DNS record
+    - [x] provision a compute instance programatically
+    - [x] reachable via DNS record
 
 Some EXTRAs to implement:
 
