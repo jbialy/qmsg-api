@@ -53,7 +53,7 @@ class PostResource(Resource):
         # move some of the logic to the PostModel object?
         result = PostModel.query.filter_by(id=post_id).first()
         # form an error response
-        response = {'message' : 'no posts found for this user_id'}
+        response = {'message' : 'no posts found for this post_id'}
         if (result):
             # return the actual query results
             response = { 'user_id' : result.user_id, 'post' : result.message, "palindrome" : is_palindrome(result.message)}
