@@ -36,7 +36,7 @@ class PostResource(Resource):
         def is_palindrome(message):
             ## let's check if the post is a palindrome 
             message_stripped = message.replace(" ", "")
-            # travers the string, comparing char at pos[0+N] to pos[STRLENGTH-N]
+            # traverses the string, comparing char at pos[0+N] to pos[STRLENGTH-N]
             # if all chars are equal then we have a palindrome!
             palindrome = True
             for pos, char in enumerate(message_stripped):
@@ -47,7 +47,7 @@ class PostResource(Resource):
                     break
             return palindrome
 
-        # change to to better utilize the PostModel object?
+        # move some of the logic to the PostModel object?
         result = PostModel.query.filter_by(id=post_id).first()
         return { 'user_id' : result.user_id, 'post' : result.message, "palindrome" : is_palindrome(result.message)}
 
