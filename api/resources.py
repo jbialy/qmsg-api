@@ -26,23 +26,30 @@ class PostListResource(Resource):
 # define /post endpoint
 #  
 class PostResource(Resource):
+
     def get(self, post_id):
+
+        #
+        # the function accepts a string and checks to see if it's a palindrome
+        # returns: True or False
+        # 
+        def is_palindrome(message):
+            ## let's check if the post is a palindrome 
+            message_stripped = message.replace(" ", "")
+            # travers the string, comparing char at pos[0+N] to pos[STRLENGTH-N]
+            # if all chars are equal then we have a palindrome!
+            palindrome = True
+            for pos, char in enumerate(message_stripped):
+                msg_len = len(message_stripped)-1
+                if (char != message_stripped[msg_len-pos]):
+                    # as soon as we don't find a match break out
+                    palindrome = False
+                    break
+            return palindrome
+
         # change to to better utilize the PostModel object?
         result = PostModel.query.filter_by(id=post_id).first()
-        ## let's check if the post is a palindrome 
-        message = result.message
-        # remove spaces
-        message_stripped = message.replace(" ", "")
-        # travers the string, comparing char at pos[0+N] to pos[STRLENGTH-N]
-        # if all chars are equal then we have a palindrome!
-        is_palindrome = True
-        for pos, char in enumerate(message_stripped):
-            msg_len = len(message_stripped)-1
-            if (char != message_stripped[msg_len-pos]):
-                # as soon as we don't find a match break out
-                is_palindrome = False
-                break
-        return { 'user_id' : result.user_id, 'post' : result.message, "palindrome" : is_palindrome}
+        return { 'user_id' : result.user_id, 'post' : result.message, "palindrome" : is_palindrome(result.message)}
 
     def post(self):
         args = parser.parse_args()
