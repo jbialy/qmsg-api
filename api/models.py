@@ -24,5 +24,5 @@ class PostModel(db.Model):
         db.session.commit()
 
     def __repr__(self):
-        ## a string representation of the Post object
-        return "<Post: {}>".format(self.id)
+        ## a friendly representation of the PostModel object
+        return "<PostModel: {}>".format(self.id)
