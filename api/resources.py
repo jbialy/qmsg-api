@@ -35,4 +35,4 @@ class PostResource(Resource):
         new_post = PostModel(args['user_id'], args['message'])
         new_post.save()
         # simply return the new post
-        return {int(args['user_id']) : args['message']}, 201
+        return {'user_id' : args['user_id'], 'message' : args['message']}, 201
