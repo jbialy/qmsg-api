@@ -20,7 +20,7 @@ from api.resources import PostListResource, PostResource
 # connect to the db
 db.init_app(app)
 
-# switch to app context and create tables
+# switch to app context and provision tables
 # reference : http://flask-sqlalchemy.pocoo.org/2.3/contexts/
 with app.app_context():
     db.create_all()
