@@ -58,7 +58,7 @@ pip2 install -r requirements.txt
 * make sure you've activate your virtualenv (see installation)
 * run "python2 run.py" (this assums python binary installed through "brew")
 * the server is now listening on http://localhost:5000
-> note that if the database is doesn't exist it will be provisioned automatically using the schema defined in models.py
+> note that if the database doesn't exist it will be provisioned automatically using the schema defined in api/models.py
 
 ### interaction
 
@@ -79,4 +79,7 @@ curl http://localhost:5000/posts
 ```bash
 curl http://localhost:5000/post/2
 ```
+
+## things to cleanup/make better
+* flask-resful handles many errors and provides parsing out of the box but additional error handling should be added
 
