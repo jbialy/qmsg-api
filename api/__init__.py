@@ -6,7 +6,9 @@ from flask_restful import Api
 from api.models import db
 
 # init a Flask app
-app = Flask(__name__)
+application = Flask(__name__)
+# map the application back to app
+app = application
 
 # make it an flast_resful API
 restfulAPI = Api(app)
