@@ -57,7 +57,8 @@ pip2 install -r requirements.txt
 * cd into the working directory
 * make sure you've activate your virtualenv (see installation)
 * run "python2 run.py" (this assums python binary installed through "brew")
-* access via http://localhost:5000
+* the server is now listening on http://localhost:5000
+> note that if the database is doesn't exist it will be provisioned automatically using the schema defined in models.py
 
 ### interaction
 
