@@ -27,7 +27,10 @@ class PostListResource(Resource):
 #  
 class PostResource(Resource):
 
-    def get(self, post_id):
+    def get(self, post_id=None):
+        # check to see received a post_id
+        if (post_id == None):
+            return {'message' : 'get request must contain a post_id'}
 
         #
         # the function accepts a string and checks to see if it's a palindrome
@@ -49,7 +52,12 @@ class PostResource(Resource):
 
         # move some of the logic to the PostModel object?
         result = PostModel.query.filter_by(id=post_id).first()
-        return { 'user_id' : result.user_id, 'post' : result.message, "palindrome" : is_palindrome(result.message)}
+        # form an error response
+        response = {'message' : 'no posts found for this user_id'}
+        if (result):
+            # return the actual query results
+            response = { 'user_id' : result.user_id, 'post' : result.message, "palindrome" : is_palindrome(result.message)}
+        return response
 
     def post(self):
         args = parser.parse_args()
