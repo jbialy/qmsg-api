@@ -90,7 +90,7 @@ pip2 install awsebcli
 ```
 * initialize a new application on AWS. You will need an account with a "service role" and your AWS credentials configured
 ```bash
-eb init qmsg-api [--profile my_aws_profile]
+eb init --platform "Python 2.7" --region "ca-central-1" qmsg-api 
 ```
 * create your environmenet and bring up all services:
 ```bash
@@ -100,7 +100,6 @@ eb create flask-dev --cname qmsg-api-dev --single
 * when done, the environment and application can be terminated using:
 ```bash
 eb terminate flask-dev
-eb delete -a qmsg-api
 ```
 
 ## things to cleanup/make better
