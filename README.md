@@ -96,7 +96,7 @@ eb init --platform "Python 2.7" --region "ca-central-1" qmsg-api
 ```bash
 eb create flask-dev --cname qmsg-api-dev --single
 ```
-* an api instance will be be available using the cname specific. ex: http://qmsg-api-dev.ca-central-1.elasticbeanstalk.com
+* an api instance will be be available using the cname specific. ex: http://qmsg-api-dev.ca-central-1.elasticbeanstalk.com or run "eb open"
 * when done, the environment and application can be terminated using:
 ```bash
 eb terminate flask-dev
