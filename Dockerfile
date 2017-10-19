@@ -10,4 +10,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # launch the app
 EXPOSE 5000
 ENTRYPOINT ["python"]
-CMD [ "application.py" ]
+CMD [ "app_docker.py" ]
