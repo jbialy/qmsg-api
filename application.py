@@ -6,4 +6,4 @@
 from api import application
 
 if __name__ == '__main__':
-    application.run(debug=False)
+    application.run(host='0.0.0.0', debug=False)
