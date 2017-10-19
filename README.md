@@ -21,7 +21,7 @@ Some EXTRAs to implement:
     - [ ] allows to select a given message to see extra details
 
 - [ ] functional and system tests
-- [ ] deployable in a container
+- [x] deployable in a container
 
 ## method
 
@@ -109,6 +109,8 @@ docker pull jbialy/qmsg-api
 docker run -d -p 5000:5000 jbialy/qmsg-api
 ```
 The service will be accessible on localhost:5000
+
+Try it with [play-with-docker!](http://labs.play-with-docker.com)
 
 ## things to cleanup/make better
 * unit testing should be done to make sure that nothing breaks during development. This can be implemented using the "request" module and have a script run a set of requests to test the integrity of the api.
