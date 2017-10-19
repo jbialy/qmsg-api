@@ -102,6 +102,14 @@ eb create flask-dev --cname qmsg-api-dev --single
 eb terminate flask-dev
 ```
 
+### docker ###
+You can also run the app in docker by pulling the image directly from dockerhub
+```bash
+docker pull jbialy/qmsg-api
+docker run -d -p 5000:5000 jbialy/qmsg-api
+```
+The service will be accessible on localhost:5000
+
 ## things to cleanup/make better
 * unit testing should be done to make sure that nothing breaks during development. This can be implemented using the "request" module and have a script run a set of requests to test the integrity of the api.
 * some of the resource logic could be moved to the db.Model object to clean up the code
